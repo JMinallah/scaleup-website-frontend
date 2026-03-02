@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, X, User, Menu, Mail } from "lucide-react";
+import { ChevronDown, X, User, Mail } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import logo from "../assets/logo.png";
 
 const skillOptions = [
@@ -56,7 +57,7 @@ const ApplicationDetails = () => {
   useEffect(() => {
     if (submitted) {
       const timer = setTimeout(() => {
-        navigate("/testimonials"); // TODO: change to "/" when home page is ready
+        navigate("/"); // Redirect to home page after submission
       }, 5000);
       return () => clearTimeout(timer);
     }
@@ -64,8 +65,6 @@ const ApplicationDetails = () => {
 
   const inputBase =
     "w-full border border-gray-300 rounded-lg px-4 py-3 text-sm font-[Poppins] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#193A84] focus:ring-1 focus:ring-[#193A84] transition-colors";
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-[Poppins] relative">
@@ -90,30 +89,8 @@ const ApplicationDetails = () => {
         </div>
       )}
 
-      {/* Mobile Nav — hidden on desktop */}
-      <nav className="bg-[#FFFFFF] px-6 py-4 flex items-center justify-between md:hidden relative z-[60]">
-        <div className="flex items-center gap-2">
-          <img src={logo} alt="ScaleUp" className="h-8 w-auto" />
-        </div>
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="text-[#193A84]"
-          aria-label="Toggle menu"
-        >
-          <Menu size={24} />
-        </button>
-      </nav>
-
-      {/* Mobile dropdown menu */}
-      {mobileMenuOpen && (
-        <div className="bg-[#193A84] px-6 pb-4 flex flex-col gap-3 md:hidden">
-          <Link to="/" className="text-white/80 text-sm hover:text-white">Home</Link>
-          <a href="#" className="text-white/80 text-sm hover:text-white">About Us</a>
-          <a href="#" className="text-white/80 text-sm hover:text-white">Products</a>
-          <Link to="/testimonials" className="text-white/80 text-sm hover:text-white">Testimonials</Link>
-          <a href="#" className="text-white/80 text-sm hover:text-white">Contact Us</a>
-        </div>
-      )}
+      {/* Navbar — mobile only on this page */}
+      <Navbar mobileOnly />
 
       {/* Logo — desktop only */}
       <div className="hidden md:flex items-center gap-2 px-6 pt-6">

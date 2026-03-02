@@ -1,8 +1,6 @@
-import { Star, Menu } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Star } from "lucide-react";
 import Footer from "../components/Footer";
-import logo from "../assets/logo.png";
+import Navbar from "../components/Navbar";
 import olukayodeImg from "../assets/Olukayode.png";
 import benedictaImg from "../assets/Benedicta.png";
 import haulatImg from "../assets/Haulat.png";
@@ -75,34 +73,10 @@ const TestimonialCard = ({ testimonial }) => {
 };
 
 const Testimonials = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Mobile Nav — hidden on desktop */}
-      <nav className="bg-[#FFFFFF] px-6 py-4 flex items-center justify-between md:hidden">
-        <div className="flex items-center gap-2">
-          <img src={logo} alt="ScaleUp" className="h-8 w-auto" />
-        </div>
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="text-[#193A84]"
-          aria-label="Toggle menu"
-        >
-          <Menu size={24} />
-        </button>
-      </nav>
-
-      {/* Mobile dropdown menu */}
-      {mobileMenuOpen && (
-        <div className="bg-[#193A84] px-6 pb-4 flex flex-col gap-3 md:hidden">
-          <a href="#" className="text-white/80 text-sm hover:text-white">Home</a>
-          <a href="#" className="text-white/80 text-sm hover:text-white">About Us</a>
-          <a href="#" className="text-white/80 text-sm hover:text-white">Products</a>
-          <a href="#" className="text-white/80 text-sm hover:text-white">Testimonials</a>
-          <a href="#" className="text-white/80 text-sm hover:text-white">Contact Us</a>
-        </div>
-      )}
+      {/* Navbar — mobile only on this page */}
+      <Navbar mobileOnly />
 
       {/* Hero heading area */}
       <section className="bg-[#193A84] h-[256px] md:h-[270px] flex flex-col items-center justify-center px-6 text-center">
