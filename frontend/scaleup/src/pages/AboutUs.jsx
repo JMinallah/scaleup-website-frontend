@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { Users, Eye, Handshake, CheckCircle, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import heroImg from "../assets/Ellipse 1.png";
-import aboutImg from "../assets/Rectangle 89.png";
-import missionImg from "../assets/Frame 7.png";
-import visionImg from "../assets/Frame 8.png";
+import heroImg from "../assets/Subtract.png";
+import aboutImg from "../assets/Rectangle 5.png";
+import missionImg from "../assets/Subtract.png";
 
 /* ──────────────────────────────────────────────
    Values data
@@ -64,19 +63,17 @@ const AboutUs = () => {
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
             About Us
           </h1>
-          <p className="text-white/80 text-base md:text-lg max-w-lg">
-            Learn more about our community, mission, and the values that drive us.
-          </p>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════
           ABOUT SCALEUP SECTION
          ═══════════════════════════════════════ */}
-      <section className="bg-white px-6 lg:px-16 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          {/* Photo */}
-          <div className="flex-1">
+      <section className="relative z-10 -mt-10 md:-mt-14 bg-white rounded-t-[20px] py-16 md:px-6 lg:px-16 md:py-24">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-16">
+
+          {/* Photo — order 1 on mobile, left on desktop */}
+          <div className="order-1 md:order-none flex-1 w-full px-3 md:px-0">
             <img
               src={aboutImg}
               alt="Team collaborating at a monitor"
@@ -84,8 +81,18 @@ const AboutUs = () => {
             />
           </div>
 
-          {/* Text */}
-          <div className="flex-1">
+          {/* Join Us button — mobile only, order 2, same width as image */}
+          <div className="order-2 md:hidden w-full px-3">
+            <Link
+              to="/join-us"
+              className="block w-full text-center bg-[#193A84] text-white font-semibold text-base py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+            >
+              Join Us
+            </Link>
+          </div>
+
+          {/* Text — order 3 on mobile, right on desktop */}
+          <div className="order-3 md:order-none flex-1 px-6 md:px-0">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-5">
               About ScaleUp
             </h2>
@@ -95,27 +102,30 @@ const AboutUs = () => {
               passionate individuals to solve real problems by building digital
               products that matter.
             </p>
+            {/* Desktop-only Join Us button */}
             <Link
               to="/join-us"
-              className="inline-block bg-[#193A84] text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="hidden md:inline-block bg-[#193A84] text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* ═══════════════════════════════════════
           MISSION & VISION
          ═══════════════════════════════════════ */}
-      <section className="bg-[#F9FAFB] px-6 lg:px-16 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto space-y-20">
-          {/* ── Our Mission ── */}
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-            {/* Text */}
-            <div className="flex-1 order-2 md:order-1">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center">
+      <section className="px-6 lg:px-16 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16">
+
+          {/* ── Left column: Mission (top) + Vision (bottom) ── */}
+          <div className="flex flex-col gap-12 md:gap-16 flex-1">
+            {/* Mission */}
+            <div>
+              <div className="flex flex-col gap-3 mb-4">
+                <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center flex-shrink-0">
                   <Users size={22} className="text-white" />
                 </span>
                 <h3 className="text-xl md:text-2xl font-bold text-[#1a1a2e]">
@@ -128,30 +138,11 @@ const AboutUs = () => {
                 experience.
               </p>
             </div>
-            {/* Photo */}
-            <div className="flex-1 order-1 md:order-2">
-              <img
-                src={missionImg}
-                alt="Team in collaborative meeting"
-                className="w-full h-[220px] md:h-[300px] object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-          </div>
 
-          {/* ── Our Vision ── */}
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-            {/* Photo */}
-            <div className="flex-1">
-              <img
-                src={visionImg}
-                alt="Team discussion at table"
-                className="w-full h-[220px] md:h-[300px] object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-            {/* Text */}
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center">
+            {/* Vision */}
+            <div>
+              <div className="flex flex-col gap-3 mb-4">
+                <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center flex-shrink-0">
                   <Eye size={22} className="text-white" />
                 </span>
                 <h3 className="text-xl md:text-2xl font-bold text-[#1a1a2e]">
@@ -164,13 +155,23 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
+
+          {/* ── Right column: image — desktop only ── */}
+          <div className="hidden md:flex flex-1 self-stretch">
+            <img
+              src={missionImg}
+              alt="Team in collaborative meeting"
+              className="w-full h-full object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
         </div>
       </section>
 
       {/* ═══════════════════════════════════════
           OUR VALUES SECTION
          ═══════════════════════════════════════ */}
-      <section className="bg-[#193A84] px-6 lg:px-16 py-16 md:py-24">
+      <section className="bg-[#193A84] px-6 lg:px-16 py-8 md:py-24 mb-5 md:mb-0 md:mx-6 lg:mx-12 md:rounded-[20px]">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
@@ -182,34 +183,68 @@ const AboutUs = () => {
             us create solutions that truly matter.
           </p>
 
-          {/* Value cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Value cards — desktop: 2-col asymmetric | mobile: horizontal scroll */}
+
+          {/* Mobile: horizontal scroll row */}
+          <div className="flex md:hidden gap-4 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide">
             {values.map((value) => {
               const Icon = value.icon;
               return (
                 <div
                   key={value.title}
-                  className="bg-white rounded-2xl p-7 shadow-md hover:-translate-y-1 transition-transform duration-300"
+                  className="flex-shrink-0 w-[72vw] max-w-[280px] snap-start bg-white rounded-2xl p-6 shadow-md"
                 >
                   <span className="w-12 h-12 rounded-full bg-[#193A84]/10 flex items-center justify-center mb-5">
                     <Icon size={24} className="text-[#193A84]" />
                   </span>
-                  <h4 className="font-bold text-[#1a1a2e] text-base mb-2">
-                    {value.title}
-                  </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    {value.desc}
-                  </p>
+                  <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{value.title}</h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">{value.desc}</p>
                 </div>
               );
             })}
           </div>
 
+          {/* Desktop: 2-column asymmetric grid */}
+          <div className="hidden md:flex gap-6 items-stretch">
+            {/* Left column — first card, full height */}
+            {(() => {
+              const Icon = values[0].icon;
+              return (
+                <div className="flex-1 bg-white rounded-2xl p-7 shadow-md hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+                  <span className="w-12 h-12 rounded-full bg-[#193A84]/10 flex items-center justify-center mb-5">
+                    <Icon size={24} className="text-[#193A84]" />
+                  </span>
+                  <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{values[0].title}</h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">{values[0].desc}</p>
+                </div>
+              );
+            })()}
+
+            {/* Right column — 4 remaining cards in 2×2 grid */}
+            <div className="flex-1 grid grid-cols-2 gap-6">
+              {values.slice(1).map((value) => {
+                const Icon = value.icon;
+                return (
+                  <div
+                    key={value.title}
+                    className="bg-white rounded-2xl p-7 shadow-md hover:-translate-y-1 transition-transform duration-300"
+                  >
+                    <span className="w-12 h-12 rounded-full bg-[#193A84]/10 flex items-center justify-center mb-5">
+                      <Icon size={24} className="text-[#193A84]" />
+                    </span>
+                    <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{value.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{value.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           {/* CTA */}
-          <div className="flex justify-center mt-14">
+          <div className="mt-10 md:mt-14 px-3 md:px-0 md:flex md:justify-center">
             <Link
               to="/join-us"
-              className="bg-white text-[#193A84] font-semibold text-base px-10 py-3.5 rounded-lg hover:bg-gray-100 transition-colors"
+              className="block md:inline-block w-full md:w-auto text-center bg-white text-[#193A84] font-semibold text-base px-10 py-3.5 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Join Us
             </Link>

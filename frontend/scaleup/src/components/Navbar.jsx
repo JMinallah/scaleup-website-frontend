@@ -50,12 +50,6 @@ const Navbar = ({ mobileOnly = false }) => {
           <div className="flex items-center gap-4">
             <Link
               to="/join-us"
-              className="text-[#193A84] text-[15px] font-medium hover:text-[#142e6b] transition-colors"
-            >
-              Join Us
-            </Link>
-            <Link
-              to="/join-us"
               className="bg-[#193A84] text-white text-[15px] font-semibold px-6 py-2.5 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
@@ -102,23 +96,9 @@ const Navbar = ({ mobileOnly = false }) => {
           >
             Products
           </Link>
-          <Link
-            to="/testimonials"
-            className="text-white/80 text-sm hover:text-white"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Testimonials
-          </Link>
           <a href="/#contact" className="text-white/80 text-sm hover:text-white">
             Contact Us
           </a>
-          <Link
-            to="/join-us"
-            className="text-white/80 text-sm hover:text-white"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Join Us
-          </Link>
         </div>
       )}
     </>

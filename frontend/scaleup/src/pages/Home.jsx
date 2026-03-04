@@ -4,47 +4,26 @@ import { Check } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import heroImg from "../assets/WhatsApp_Image_2026-02-07_at_2.11.15_AM-removebg-preview 1.png";
-import aboutImg1 from "../assets/Rectangle 89.png";
 import aboutImg2 from "../assets/Rectangle 5.png";
 import aboutImg3 from "../assets/Rectangle 6.png";
 import phone1 from "../assets/iPhone 16 Pro.png";
 import phone2 from "../assets/iPhone 16 Pro(1).png";
+import githubImg from "../assets/github.png";
+import slackImg from "../assets/slack.png";
+import figmaImg from "../assets/figma.png";
+import googleImg from "../assets/google.png";
+import notionImg from "../assets/notion.png";
 
 /* ──────────────────────────────────────────────
-   Inline brand SVG icons (no icon library needed)
+   Tools / brands data
    ────────────────────────────────────────────── */
-const GitHubIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor">
-    <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.09-.73.083-.716.083-.716 1.205.083 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.98.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.228-3.164-.123-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.5 11.5 0 0 1 12 6.272c1.016.004 2.036.134 2.99.394 2.276-1.523 3.276-1.209 3.276-1.209.65 1.623.241 2.822.118 3.12.764.825 1.226 1.877 1.226 3.164 0 4.53-2.805 5.528-5.475 5.818.43.364.823 1.084.823 2.185 0 1.577-.014 2.849-.014 3.236 0 .315.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z" />
-  </svg>
-);
-
-const SlackIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor">
-    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" />
-  </svg>
-);
-
-const FigmaIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor">
-    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 8.942v-7.47h3.117c2.476 0 4.49 2.013 4.49 4.489 0 2.476-2.014 4.49-4.49 4.49h-1.647c-1.09 0-1.47-1.51-1.47-1.51zm1.471.04h1.647c1.665 0 3.019-1.355 3.019-3.019 0-1.665-1.354-3.02-3.019-3.02h-3.117v4.529c0 .831.638 1.51 1.47 1.51zM8.148 24c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v4.49c0 2.476-2.013 4.49-4.588 4.49zm0-7.51c-1.665 0-3.019 1.355-3.019 3.02s1.354 3.019 3.019 3.019c1.665 0 3.117-1.354 3.117-3.019v-3.02H8.148zM8.148 8.981c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981H8.148zm0-7.51c-1.665 0-3.019 1.355-3.019 3.02s1.354 3.019 3.019 3.019h3.117V1.471H8.148z" />
-  </svg>
-);
-
-const GoogleIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-8 w-8">
-    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
-    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-  </svg>
-);
-
-const NotionIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor">
-    <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L18.1 2.03c-.42-.326-.98-.7-2.055-.607L3.01 2.75c-.467.046-.56.28-.374.466l1.823.992zm.793 3.172v13.856c0 .746.373 1.027 1.213.98l14.523-.839c.84-.046.933-.56.933-1.166V6.354c0-.606-.233-.933-.746-.886l-15.177.839c-.56.047-.746.327-.746.887zm14.337.745c.093.42 0 .84-.42.886l-.7.14v10.264c-.607.327-1.166.514-1.633.514-.746 0-.933-.234-1.493-.933l-4.573-7.186v6.953l1.447.327s0 .84-1.166.84l-3.218.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.462 9.76c-.093-.42.14-1.026.793-1.073l3.451-.234 4.759 7.28V9.387l-1.213-.14c-.093-.513.28-.886.746-.933l3.451-.186z" />
-  </svg>
-);
+const tools = [
+  { name: "GitHub", img: githubImg, url: "https://github.com" },
+  { name: "Slack", img: slackImg, url: "https://slack.com" },
+  { name: "Figma", img: figmaImg, url: "https://figma.com" },
+  { name: "Google", img: googleImg, url: "https://google.com" },
+  { name: "Notion", img: notionImg, url: "https://notion.so" },
+];
 
 /* ──────────────────────────────────────────────
    About section bullet items
@@ -82,14 +61,14 @@ const Home = () => {
       {/* ═══════════════════════════════════════
           HERO SECTION
          ═══════════════════════════════════════ */}
-      <section className="bg-white px-6 lg:px-16 py-12 md:py-20">
+      <section className="bg-white px-6 lg:px-10 pt-6 md:pt-12 pb-0">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Text */}
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-3xl md:text-[42px] lg:text-5xl font-bold text-[#1a1a2e] leading-tight mb-6">
+          <div className="flex-1 text-left">
+            <h1 className="text-3xl md:text-[48px] lg:text-5xl font-bold text-[#1E4E8C] leading-tight mb-6">
               Building Products, People, and Possibilities Together
             </h1>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
+            <p className="text-[#1E4E8C] font-[Inter] font-normal text-[16px] leading-[34px] md:font-[Poppins] md:font-medium md:text-[22px] md:leading-[34px] mb-8 max-w-xl md:mx-0">
               ScaleUp is a collaborative innovation hub where talents come
               together to build real digital products, gain hands-on experience,
               and turn ideas into impactful solutions.
@@ -102,16 +81,18 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Hero Image — circular with dashed border */}
+          {/* Hero Image — with dashed dots & blue circle behind */}
           <div className="flex-shrink-0 flex items-center justify-center">
-            <div className="relative w-[260px] h-[260px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px]">
+            <div className="relative w-[254px] h-[234px] md:w-[420px] md:h-[387px]">
               {/* Dashed circle outline */}
-              <div className="absolute inset-0 rounded-full border-[3px] border-dashed border-[#193A84]/30" />
-              {/* Image */}
+              <div className="absolute top-[25px] left-[65px] w-[200px] h-[200px] md:top-[22px] md:left-[116px] md:w-[320px] md:h-[320px] rounded-full border-[3px] border-dashed border-black" />
+              {/* Colored circle */}
+              <div className="absolute top-[30px] left-[70px] w-[190px] h-[190px] md:top-[30px] md:left-[124px] md:w-[304px] md:h-[304px] rounded-full bg-[#1E4E8CE5]" />
+              {/* Image — on top */}
               <img
                 src={heroImg}
                 alt="ScaleUp team member"
-                className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] object-cover rounded-full"
+                className="absolute inset-0 w-full h-full object-contain z-10"
               />
             </div>
           </div>
@@ -121,50 +102,45 @@ const Home = () => {
       {/* ═══════════════════════════════════════
           TOOLS / TECH STACK BAR
          ═══════════════════════════════════════ */}
-      <section className="bg-[#F3F4F6] py-6 md:py-8">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-10 md:gap-16 px-6 text-gray-500">
-          <GitHubIcon />
-          <SlackIcon />
-          <FigmaIcon />
-          <GoogleIcon />
-          <NotionIcon />
+      <section className="bg-[#1E4E8C4D] py-4 md:py-6">
+        <div className="max-w-4xl mx-auto flex items-center justify-between px-6">
+          {tools.map((tool) => (
+            <a
+              key={tool.name}
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-none p-0 cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <img src={tool.img} alt={tool.name} className="h-6 md:h-8 w-auto" />
+            </a>
+          ))}
         </div>
       </section>
 
       {/* ═══════════════════════════════════════
           ABOUT SCALEUP SECTION
          ═══════════════════════════════════════ */}
-      <section id="about" className="bg-white px-6 lg:px-16 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          {/* Photo grid */}
-          <div className="flex-1 grid grid-cols-2 gap-4">
-            {/* Large top image spanning both cols */}
-            <div className="col-span-2">
-              <img
-                src={aboutImg1}
-                alt="Team collaborating at monitor"
-                className="w-full h-[200px] md:h-[260px] object-cover rounded-xl shadow-md"
-              />
-            </div>
-            {/* Two smaller images side by side */}
-            <div>
-              <img
-                src={aboutImg2}
-                alt="Team meeting around laptop"
-                className="w-full h-[140px] md:h-[180px] object-cover rounded-xl shadow-md"
-              />
-            </div>
-            <div>
-              <img
-                src={aboutImg3}
-                alt="Group discussion circle"
-                className="w-full h-[140px] md:h-[180px] object-cover rounded-xl shadow-md"
-              />
-            </div>
+      <section id="about" className="bg-white pt-16 md:py-10">
+        <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8">
+          {/* Photo stack — pixel-accurate from Figma */}
+          <div className="order-2 md:order-1 md:w-[55%] flex-shrink-0 relative h-[360px] md:h-[640px] w-full">
+            {/* First image */}
+            <img
+              src={aboutImg2}
+              alt="Team meeting around laptop"
+              className="absolute top-0 left-[16px] w-[53%] h-[200px] md:left-0 md:w-[85%] md:h-[460px] object-cover rounded-[10px] shadow-md"
+            />
+            {/* Second image — overlapping at bottom-right of first */}
+            <img
+              src={aboutImg3}
+              alt="Group discussion circle"
+              className="absolute top-[110px] right-[16px] w-[60%] h-[190px] md:top-[300px] md:right-0 md:left-auto md:w-[56%] md:h-[340px] object-cover rounded-[10px] border-[5px] border-white shadow-md z-10"
+            />
           </div>
 
           {/* Text content */}
-          <div className="flex-1">
+          <div className="order-1 md:order-2 flex-1 px-6 md:px-4 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-5">
               About ScaleUp
             </h2>
@@ -206,16 +182,24 @@ const Home = () => {
          ═══════════════════════════════════════ */}
       <section
         id="products"
-        className="bg-gradient-to-b from-[#F3F4F6] to-[#E8EAF0] px-6 lg:px-16 py-16 md:py-24"
+        className="bg-white py-8 mb-15 md:py-10"
       >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] text-center mb-14">
-            Our Products
-          </h2>
+        {/* Heading — outside the bordered box */}
+        <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] text-center mb-8 px-6">
+          Our Products
+        </h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        {/* Bordered content box — full width, gradient contained inside */}
+        <div
+          className="w-full border border-white px-6 lg:px-12 py-5 md:py-8 bg-[#D7DFEA]"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             {/* Text block */}
             <div className="flex-1">
+              {/* Coming Soon button — above HelloAgain */}
+              <button className="inline-flex items-center justify-center bg-[#2FB7A3] text-white font-bold text-xs md:text-sm rounded-[50px] mb-4 transition-all duration-200 ease-out w-[160px] h-[40px] px-[20px] md:w-[220px] md:h-[56px] md:px-[22px] md:py-[16px]">
+                Coming Soon!!!
+              </button>
               <h3 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4">
                 HelloAgain
               </h3>
@@ -228,39 +212,36 @@ const Home = () => {
               </p>
 
               {/* Email + Notify Me */}
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md">
+              <div className="flex items-center w-full max-w-[360px] md:max-w-md bg-white border border-gray-300 rounded-[100px] p-1.5 md:p-2">
                 <input
                   type="email"
                   value={notifyEmail}
                   onChange={(e) => setNotifyEmail(e.target.value)}
                   placeholder="Enter email address"
-                  className="flex-1 border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#193A84] focus:ring-1 focus:ring-[#193A84] transition-colors"
+                  className="flex-1 bg-transparent pl-3 md:pl-4 pr-2 py-1.5 text-xs md:text-sm text-gray-800 placeholder-gray-400 focus:outline-none min-w-0"
                 />
-                <button className="bg-[#16A34A] hover:bg-[#15803D] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap cursor-pointer">
+                <button className="flex-shrink-0 bg-[#2FB7A3] hover:bg-[#26a090] text-white font-semibold text-xs md:text-sm px-4 md:px-6 py-2 md:py-2.5 rounded-[100px] whitespace-nowrap transition-colors cursor-pointer">
                   Notify Me
                 </button>
               </div>
             </div>
 
-            {/* Phone mockups + Coming Soon badge */}
-            <div className="flex-1 flex items-center justify-center relative">
-              {/* Coming Soon badge */}
-              <div className="absolute -top-4 right-0 md:right-4 z-20 bg-[#16A34A] text-white font-bold text-xs md:text-sm px-4 py-2 rounded-full shadow-lg rotate-3">
-                Coming Soon!!!
-              </div>
-
-              <div className="relative w-[280px] h-[340px] md:w-[360px] md:h-[440px]">
-                {/* Back phone (tilted right) */}
+            {/* Phone mockups */}
+            <div className="flex-1 flex items-center justify-center">
+              <div className="relative w-[250px] h-[255px] md:w-[416px] md:h-[426px]">
+                {/* Blue rounded rectangle — at the bottom, phones emerge from it */}
+                <div className="absolute bottom-0 left-0 w-full h-[64%] bg-[#1E4E8C] rounded-[30px] md:rounded-[50px]" />
+                {/* Back phone (right, taller) */}
                 <img
                   src={phone2}
                   alt="HelloAgain app screen"
-                  className="absolute right-0 top-0 w-[55%] h-auto drop-shadow-2xl rotate-[6deg] origin-bottom-left"
+                  className="absolute bottom-0 left-[44%] w-[49%] h-auto z-[1]"
                 />
-                {/* Front phone (tilted left) */}
+                {/* Front phone (left, slightly shorter) */}
                 <img
                   src={phone1}
                   alt="HelloAgain app screen"
-                  className="absolute left-0 top-6 w-[55%] h-auto drop-shadow-2xl -rotate-[6deg] origin-bottom-right z-10"
+                  className="absolute bottom-0 left-[7%] w-[49%] h-auto z-[2]"
                 />
               </div>
             </div>

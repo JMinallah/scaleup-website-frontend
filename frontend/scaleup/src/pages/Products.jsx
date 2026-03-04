@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import heroImg from "../assets/Frame 11(1).png";
+import heroImg from "../assets/Subtract.png";
 import phone1 from "../assets/iPhone 16 Pro.png";
 import phone2 from "../assets/iPhone 16 Pro(1).png";
 
@@ -33,24 +33,20 @@ const Products = () => {
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
             Products
           </h1>
-          <p className="text-white/80 text-base md:text-lg max-w-lg">
-            Discover the digital products we&rsquo;re building to create real
-            impact.
-          </p>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════
           HELLOAGAIN PRODUCT SHOWCASE
          ═══════════════════════════════════════ */}
-      <section className="bg-white px-6 lg:px-16 py-16 md:py-24">
+      <section className="relative z-10 -mt-10 md:-mt-14 bg-white rounded-t-[20px] px-6 lg:px-16 py-16 md:py-24">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
           {/* ── Text block ── */}
           <div className="flex-1">
-            {/* Coming Soon badge */}
-            <span className="inline-block bg-[#16A34A] text-white font-bold text-xs md:text-sm px-5 py-2 rounded-full mb-6 shadow-md">
+            {/* Coming Soon button */}
+            <button className="inline-flex items-center justify-center bg-[#2FB7A3] text-white font-bold text-xs md:text-sm rounded-[50px] mb-6 transition-all duration-200 ease-out w-[160px] h-[40px] px-[20px] md:w-[220px] md:h-[56px] md:px-[22px] md:py-[16px]">
               Coming Soon!!!
-            </span>
+            </button>
 
             <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#1a1a2e] leading-tight mb-5">
               HelloAgain
@@ -64,15 +60,15 @@ const Products = () => {
             </p>
 
             {/* Email capture */}
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md">
+            <div className="flex items-center w-full max-w-[360px] md:max-w-md bg-white border border-gray-300 rounded-[100px] p-1.5 md:p-2">
               <input
                 type="email"
                 value={notifyEmail}
                 onChange={(e) => setNotifyEmail(e.target.value)}
                 placeholder="Enter email address"
-                className="flex-1 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#193A84] focus:ring-1 focus:ring-[#193A84] transition-colors"
+                className="flex-1 bg-transparent pl-3 md:pl-4 pr-2 py-1.5 text-xs md:text-sm text-gray-800 placeholder-gray-400 focus:outline-none min-w-0"
               />
-              <button className="bg-[#16A34A] hover:bg-[#15803D] text-white font-semibold text-sm px-7 py-3.5 rounded-lg transition-colors whitespace-nowrap cursor-pointer">
+              <button className="flex-shrink-0 bg-[#2FB7A3] hover:bg-[#26a090] text-white font-semibold text-xs md:text-sm px-4 md:px-6 py-2 md:py-2.5 rounded-[100px] whitespace-nowrap transition-colors cursor-pointer">
                 Notify Me
               </button>
             </div>
@@ -80,21 +76,20 @@ const Products = () => {
 
           {/* ── Phone mockups ── */}
           <div className="flex-1 flex items-center justify-center">
-            <div className="relative w-[300px] h-[380px] md:w-[400px] md:h-[500px]">
-              {/* Decorative blue container shape */}
-              <div className="absolute inset-4 md:inset-6 rounded-[2rem] bg-[#193A84]/10" />
-
-              {/* Back phone (tilted right) */}
+            <div className="relative w-[250px] h-[255px] md:w-[416px] md:h-[426px]">
+              {/* Blue rounded rectangle — at the bottom, phones emerge from it */}
+              <div className="absolute bottom-0 left-0 w-full h-[64%] bg-[#1E4E8C] rounded-[30px] md:rounded-[50px]" />
+              {/* Back phone (right) */}
               <img
                 src={phone2}
                 alt="HelloAgain chat interface"
-                className="absolute right-2 md:right-4 top-0 w-[52%] h-auto drop-shadow-2xl rotate-[8deg] origin-bottom-left z-[1]"
+                className="absolute bottom-0 left-[44%] w-[49%] h-auto drop-shadow-2xl z-[1]"
               />
-              {/* Front phone (tilted left) */}
+              {/* Front phone (left) */}
               <img
                 src={phone1}
                 alt="HelloAgain chat interface"
-                className="absolute left-2 md:left-4 top-8 w-[52%] h-auto drop-shadow-2xl -rotate-[8deg] origin-bottom-right z-[2]"
+                className="absolute bottom-0 left-[7%] w-[49%] h-auto drop-shadow-2xl z-[2]"
               />
             </div>
           </div>
