@@ -39,7 +39,7 @@ const Footer = () => {
               <li><Link to="/" className="hover:underline">Home</Link></li>
               <li><Link to="/about" className="hover:underline">About Us</Link></li>
               <li><Link to="/products" className="hover:underline">Products</Link></li>
-              <li><a href="/#contact" className="hover:underline">Contact Us</a></li>
+              <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
             </ul>
           </div>
           {/* Community */}
@@ -47,8 +47,8 @@ const Footer = () => {
             <h4 className="font-bold text-[19px] mb-7 uppercase">Community</h4>
             <ul className="flex flex-col gap-5 text-[15px] text-white/80">
               <li><Link to="/testimonials" className="hover:underline">Testimonials</Link></li>
-              <li><a href="#" className="hover:underline">FAQs</a></li>
-              <li><a href="#" className="hover:underline">Team Members</a></li>
+              <li><Link to="/faq" className="hover:underline">FAQs</Link></li>
+              <li><Link to="/team" className="hover:underline">Team Members</Link></li>
               <li><Link to="/join-us" className="hover:underline">Join Us</Link></li>
             </ul>
           </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                   <li><Link to="/" className="hover:underline">Home</Link></li>
                 <li><Link to="/about" className="hover:underline">About Us</Link></li>
                 <li><Link to="/products" className="hover:underline">Products</Link></li>
-                <li><a href="/#contact" className="hover:underline">Contact Us</a></li>
+                <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
               </ul>
               {/* Socials below Explore links */}
               <div className="flex items-center gap-4 mt-5">
@@ -97,8 +97,8 @@ const Footer = () => {
               <h4 className="font-bold text-[16px] mb-4 uppercase">Community</h4>
               <ul className="flex flex-col gap-3 text-[14px] text-white/80">
                 <li><Link to="/testimonials" className="hover:underline">Testimonials</Link></li>
-                <li><a href="#" className="hover:underline">FAQs</a></li>
-                <li><a href="#" className="hover:underline">Team Members</a></li>
+                <li><Link to="/faq" className="hover:underline">FAQs</Link></li>
+                <li><Link to="/team" className="hover:underline">Team Members</Link></li>
                 <li><Link to="/join-us" className="hover:underline">Join Us</Link></li>
               </ul>
             </div>

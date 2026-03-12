@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const navLinks = [
-  { label: "Home", to: "/", type: "link" },
-  { label: "About Us", to: "/about", type: "link" },
-  { label: "Products", to: "/products", type: "link" },
-  { label: "Contact Us", to: "/#contact", type: "anchor" },
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Products", to: "/products" },
+  { label: "FAQs", to: "/faq" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 const Navbar = ({ mobileOnly = false }) => {
@@ -27,21 +28,12 @@ const Navbar = ({ mobileOnly = false }) => {
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.label}>
-                {link.type === "link" ? (
-                  <Link
-                    to={link.to}
-                    className="text-[#193A84] text-[15px] font-medium hover:text-[#142e6b] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    href={link.to}
-                    className="text-[#193A84] text-[15px] font-medium hover:text-[#142e6b] transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                )}
+                <Link
+                  to={link.to}
+                  className="text-[#193A84] text-[15px] font-medium hover:text-[#142e6b] transition-colors"
+                >
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -98,7 +90,8 @@ const Navbar = ({ mobileOnly = false }) => {
         <Link to="/" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
         <Link to="/about" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
         <Link to="/products" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-        <a href="/#contact" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+        <Link to="/faq" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>FAQs</Link>
+        <Link to="/contact" className="text-[#193A84] text-sm font-medium py-2 border-b border-gray-100 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         <Link to="/join-us" className="text-[#193A84] text-sm font-medium py-2 hover:text-[#142e6b] transition-colors" onClick={() => setMobileMenuOpen(false)}>Join Us</Link>
       </div>
     </>
