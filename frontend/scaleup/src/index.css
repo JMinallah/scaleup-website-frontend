@@ -1,3 +1,41 @@
+/* Reset defaults - use Tailwind utilities for styling */
 @import "tailwindcss";
 
-/* Reset defaults - use Tailwind utilities for styling */
+
+@theme {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+  --font-manrope: 'Manrope', system-ui, sans-serif;
+
+   --color-primary: #FFFFFF;
+   --color-secondary: #000000;
+   --color-neutral: #0F172A; 
+   --color-neutral-text: #475569; 
+   --color-neutral-muted: #64748B;
+   --color-border: #193A8433;
+   --color-input-bg: #E5E7EBAB;
+   --color-main: #193A84; 
+   --color-background: #1E4E8C; 
+   --color-btn-text: #E8EFF7;
+}
+
+:root {
+  font-family: var(--font-inter);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}  
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}

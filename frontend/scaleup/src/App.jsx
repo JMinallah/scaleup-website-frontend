@@ -1,3 +1,7 @@
+import { Routes, Route } from "react-router-dom";
+import FAQPage from "./faq/FAQ";
+import ContactPage from "./contact/ContactPage";
+import TeamPage from "./team/TeamPage";
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
@@ -8,6 +12,12 @@ import ApplicationDetails from './pages/ApplicationDetails'
 
 function App() {
   return (
+    <Routes>
+      <Route path="/" element={<ContactPage />} />
+      <Route path="/team" element={<TeamPage />} />
+      <Route path="/faq" element={<FAQPage />} />
+    </Routes>
+  );
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
