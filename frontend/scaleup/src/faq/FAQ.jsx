@@ -53,7 +53,7 @@ export default function FAQPage() {
               Cant find the answers to your question? Contact us and we’ll get back to you.
             </p>
             <button className="bg-main rounded-4xl px-6 py-2 font-manrope font-semibold text-xl text-primary shadow-xl hover:cursor-pointer">
-                <Link to="/">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
             </button>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function FAQPage() {
                 Cant find the answers to your question? Contact us and we’ll get back to you.
               </p>
               <button className="bg-main rounded-4xl px-6 py-2 font-manrope font-semibold text-xl text-primary shadow-xl hover:cursor-pointer">
-                  <Link to="/">Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
               </button>
             </div>
           </div>
