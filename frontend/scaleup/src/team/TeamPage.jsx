@@ -4,7 +4,7 @@ import adebayo from "../assets/images/adebayo.jpg";
 import angel from "../assets/images/angel.jpg";
 import benedicta from "../assets/images/benedicta.jpg";
 import daniel from "../assets/images/daniel.jpg";
-import didia from "../assets/images/didia.jpg";
+import stephanie from "../assets/images/stehanie.jpeg";
 import haulat from "../assets/images/haulat.jpg";
 import james from "../assets/images/james.jpg";
 import tiolu from "../assets/images/tiolu.jpg";
@@ -61,11 +61,11 @@ const teamMembers = [
     image: haulat,
   },
   {
-    name: "Onyinyechi Didia",
+    name: "Stephanie Matthew",
     role: "Lead, Marketing and Growth",
     description:
-      "Onyinyechi accelerates brand visibility and customer acquisition through data-driven marketing strategies and growth initiatives.",
-    image: didia,
+      "Stephanie accelerates brand visibility and customer acquisition through data-driven marketing strategies and growth initiatives.",
+    image: stephanie,
   },
   {
     name: "Angel Egerega",
