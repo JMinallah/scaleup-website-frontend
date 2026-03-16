@@ -114,7 +114,7 @@ const AboutUs = () => {
       {/* ═══════════════════════════════════════
           MISSION & VISION
          ═══════════════════════════════════════ */}
-      <section className="px-6 lg:px-16 md:py-24">
+      <section className="px-6 lg:px-16 md:py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16">
 
           {/* ── Left column: Mission (top) + Vision (bottom) ── */}

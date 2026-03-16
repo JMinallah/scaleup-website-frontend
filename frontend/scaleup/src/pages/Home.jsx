@@ -103,16 +103,16 @@ const Home = () => {
           TOOLS / TECH STACK BAR
          ═══════════════════════════════════════ */}
       <section className="bg-[#1E4E8C4D] py-4 md:py-6">
-        <div className="flex items-center justify-between px-6 md:px-16 lg:px-32">
+        <div className="flex items-center justify-start md:justify-between px-6 md:px-16 lg:px-32 gap-4 md:gap-0 overflow-x-auto">
           {tools.map((tool) => (
             <a
               key={tool.name}
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent border-none p-0 cursor-pointer hover:opacity-80 transition-opacity"
+              className="bg-transparent border-none p-1 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
             >
-              <img src={tool.img} alt={tool.name} className="h-6 md:h-8 w-auto" />
+              <img src={tool.img} alt={tool.name} className="h-5 md:h-8 w-auto" />
             </a>
           ))}
         </div>

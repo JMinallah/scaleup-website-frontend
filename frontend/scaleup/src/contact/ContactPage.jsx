@@ -72,9 +72,10 @@ const ContactPage = () => {
           </h1>
         </div>
       </header>
-      <main className="p-4">
-        {/* Main Content */}
-        <section className="pb-10 pt-2 md:pt-4">
+      <section className="relative z-10 -mt-10 md:-mt-14 bg-white rounded-t-[20px] py-16 md:px-6 lg:px-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Main Content */}
+          <section className="pb-10 pt-2 md:pt-4">
           {/* Success Message */}
           {isSubmitted && (
             <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 text-center animate-fadeIn">
@@ -263,8 +264,9 @@ const ContactPage = () => {
               </form>
             </div>
           </div>
-        </section>
-      </main>
+          </section>
+        </div>
+      </section>
       <Footer />
     </div>
   );
