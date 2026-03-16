@@ -1,8 +1,8 @@
-const BASE_URL = import.meta.env.BASE_URL || "";
+const BASE_URL = import.meta.env.VITE_BASE_URL || "";
 
 if (!BASE_URL) {
   console.warn(
-    "[api] VITE_API_BASE_URL is not set. " +
+    "[api] VITE_BASE_URL is not set. " +
     "Copy .env.example to .env and fill in the API base URL."
   );
 }
