@@ -4,10 +4,12 @@ import adebayo from "../assets/images/adebayo.jpg";
 import angel from "../assets/images/angel.jpg";
 import benedicta from "../assets/images/benedicta.jpg";
 import daniel from "../assets/images/daniel.jpg";
-import stephanie from "../assets/images/stehanie.jpeg";
+import stephanie from "../assets/images/stephanie.jpeg";
 import haulat from "../assets/images/haulat.jpg";
 import james from "../assets/images/james.jpg";
 import tiolu from "../assets/images/tiolu.jpg";
+import ese from "../assets/images/ese.jpeg";
+import david from "../assets/images/david.jpeg";
 import TeamCard from "./TeamCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -76,6 +78,20 @@ const teamMembers = [
       "Angel safeguards product quality by identifying risks early, strengthening testing processes, and delivering a seamless user experience.",
     image: angel,
   },
+  {
+    name: "Ese Ayomah",
+    role: " Lead, Content Creation",
+    description:
+      "Ese crafts engaging content that informs, entertains, and connects with audiences, bringing ideas to life across multiple platforms.",
+    image: ese,
+  },
+  {
+    name: "David  Láleye",
+    role: " Lead, Accounting",
+    description:
+      "David ensures financial accuracy and transparency by managing records, analyzing data, and supporting strategic decisions with clear insights.",
+    image: david,
+  },
 ];
 
 export default function TeamPage() {
@@ -88,10 +104,10 @@ export default function TeamPage() {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-bold text-primary text-4xl lg:text-6xl mb-2">
+          <h1 className="font-bold font-inter text-primary text-4xl lg:text-6xl mb-2">
             Our Team
           </h1>
-          <p className="font-medium font-poppins text-primary text-lg lg:text-xl">
+          <p className="font-medium text-primary text-lg lg:text-xl">
             Meet our community members
           </p>
         </div>

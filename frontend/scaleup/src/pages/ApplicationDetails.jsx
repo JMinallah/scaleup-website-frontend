@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import { post } from "../utils/api";
 import logo from "../assets/logo.png";
 
+
 const errorMessage = (err) => {
   if (err.status === 0)
     return "Unable to reach our servers. Please check your internet connection and try again.";
@@ -40,6 +41,7 @@ const ApplicationDetails = () => {
     experience: "",
     cv: "",
   });
+
 
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [skillsOpen, setSkillsOpen] = useState(false);
@@ -104,6 +106,7 @@ const ApplicationDetails = () => {
     }
   };
 
+
   // Auto-redirect after submission
   useEffect(() => {
     if (submitted) {
@@ -115,10 +118,10 @@ const ApplicationDetails = () => {
   }, [submitted, navigate]);
 
   const inputBase =
-    "w-full border border-gray-300 rounded-lg px-4 py-3 text-sm font-[Poppins] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#193A84] focus:ring-1 focus:ring-[#193A84] transition-colors";
+    "w-full border border-gray-300 rounded-lg font-manrope px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#193A84] focus:ring-1 focus:ring-[#193A84] transition-colors";
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-[Poppins] relative">
+    <div className="min-h-screen flex flex-col bg-white relative">
       {/* Thank You Overlay */}
       {submitted && (
         <div className="fixed inset-0 z-50 flex flex-col">
@@ -152,7 +155,7 @@ const ApplicationDetails = () => {
 
       {/* Header */}
       <div className="pt-10 pb-6 px-6 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+        <h1 className="text-3xl font-inter md:text-4xl font-bold text-gray-900 mb-2">
           Application Details
         </h1>
         <p className="text-gray-500 text-sm md:text-base max-w-md mx-auto">
@@ -165,12 +168,12 @@ const ApplicationDetails = () => {
       <div className="flex-1 flex justify-center px-2 pb-12">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-full p-4 md:px-6 md:py-4"
+          className="w-full md:max-w-xl lg:max-w-3xl p-4 md:px-6 md:py-4"
         >
           {/* First Name + Last Name */}
           <div className="grid grid-cols-2 gap-5 mb-5">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-inter font-medium text-gray-700 mb-1.5">
                 First Name
               </label>
               <div className="relative">

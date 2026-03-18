@@ -4,27 +4,13 @@ import { post } from "../utils/api";
 import { Check } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import heroImg from "../assets/WhatsApp_Image_2026-02-07_at_2.11.15_AM-removebg-preview 1.png";
+import heroImg from "../assets/WhatsApp_Image_2026-02-07_at_2.11.15_AM-removebg-preview 1.png"
 import aboutImg2 from "../assets/Rectangle 5.png";
 import aboutImg3 from "../assets/Rectangle 6.png";
 import phone1 from "../assets/iPhone 16 Pro.png";
 import phone2 from "../assets/iPhone 16 Pro(1).png";
-import githubImg from "../assets/github.png";
-import slackImg from "../assets/slack.png";
-import figmaImg from "../assets/figma.png";
-import googleImg from "../assets/google.png";
-import notionImg from "../assets/notion.png";
+import ToolsCarousel from "../components/ToolsCarousel";
 
-/* ──────────────────────────────────────────────
-   Tools / brands data
-   ────────────────────────────────────────────── */
-const tools = [
-  { name: "GitHub", img: githubImg, url: "https://github.com" },
-  { name: "Slack", img: slackImg, url: "https://slack.com" },
-  { name: "Figma", img: figmaImg, url: "https://figma.com" },
-  { name: "Google", img: googleImg, url: "https://google.com" },
-  { name: "Notion", img: notionImg, url: "https://notion.so" },
-];
 
 /* ──────────────────────────────────────────────
    About section bullet items
@@ -101,7 +87,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-[Poppins]">
+    <div className="min-h-screen flex flex-col">
       {/* ─── Navbar ─── */}
       <Navbar />
 
@@ -112,17 +98,17 @@ const Home = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Text */}
           <div className="flex-1 text-left">
-            <h1 className="text-3xl md:text-[48px] lg:text-5xl font-bold text-[#1E4E8C] leading-tight mb-6">
+            <h1 className="text-3xl font-inter md:text-[48px] lg:text-5xl font-bold text-[#1E4E8C] leading-tight mb-6">
               Building Products, People, and Possibilities Together
             </h1>
-            <p className="text-[#1E4E8C] font-[Inter] font-normal text-[16px] leading-[34px] md:font-[Poppins] md:font-medium md:text-[22px] md:leading-[34px] mb-8 max-w-xl md:mx-0">
+            <p className="text-[#1E4E8C] font-poppins font-normal text-[16px] leading-[34px] md:font-medium md:text-[22px] md:leading-[34px] mb-8 max-w-xl md:mx-0">
               ScaleUp is a collaborative innovation hub where talents come
               together to build real digital products, gain hands-on experience,
               and turn ideas into impactful solutions.
             </p>
             <Link
               to="/join-us"
-              className="inline-block bg-[#193A84] text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="inline-block font-inter md:mb-4 bg-[#193A84] text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
             </Link>
@@ -146,24 +132,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          TOOLS / TECH STACK BAR
-         ═══════════════════════════════════════ */}
-      <section className="bg-[#1E4E8C4D] py-4 md:py-6">
-        <div className="flex items-center justify-start md:justify-between px-6 md:px-16 lg:px-32 gap-4 md:gap-0 overflow-x-auto">
-          {tools.map((tool) => (
-            <a
-              key={tool.name}
-              href={tool.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent border-none p-1 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
-            >
-              <img src={tool.img} alt={tool.name} className="h-5 md:h-8 w-auto" />
-            </a>
-          ))}
-        </div>
-      </section>
+      <ToolsCarousel/>
 
       {/* ═══════════════════════════════════════
           ABOUT SCALEUP SECTION
@@ -216,7 +185,7 @@ const Home = () => {
 
             <Link
               to="/join-us"
-              className="inline-block mt-8 bg-[#193A84] text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="inline-block mt-8 bg-[#193A84] font-inter text-white font-semibold text-base px-8 py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
             </Link>
@@ -232,15 +201,15 @@ const Home = () => {
         className="bg-white py-8 mb-15 md:py-10"
       >
         {/* Heading — outside the bordered box */}
-        <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] text-center mb-8 px-6">
-          Our Products
+        <h2 className="text-2xl md:text-3xl font-inter font-bold text-background text-center mb-8 px-6">
+          <span className="text-secondary">Our</span> Products
         </h2>
 
         {/* Bordered content box — full width, gradient contained inside */}
         <div
           className="w-full border border-white px-6 lg:px-12 py-5 md:py-8 bg-[#D7DFEA]"
         >
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <div className="flex flex-col font-poppins md:flex-row items-center gap-10 md:gap-16">
             {/* Text block */}
             <div className="flex-1">
               {/* Coming Soon button — above HelloAgain */}

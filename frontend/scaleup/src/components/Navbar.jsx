@@ -17,7 +17,7 @@ const Navbar = ({ mobileOnly = false }) => {
     <>
       {/* Desktop Nav — hidden on mobile, hidden entirely when mobileOnly */}
       {!mobileOnly && (
-        <nav className="hidden md:flex items-center justify-between bg-white px-6 lg:px-16 py-4 font-[Poppins]">
+        <nav className="hidden md:flex items-center justify-between bg-white px-6 lg:px-16 py-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link to="/">
@@ -31,7 +31,7 @@ const Navbar = ({ mobileOnly = false }) => {
               <li key={link.label}>
                 <Link
                   to={link.to}
-                  className="text-[#193A84] text-[15px] font-medium hover:text-[#142e6b] transition-colors"
+                  className="text-background text-[15px] font-medium hover:text-hover transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -43,7 +43,7 @@ const Navbar = ({ mobileOnly = false }) => {
           <div className="flex items-center gap-4">
             <Link
               to="/join-us"
-              className="bg-[#193A84] text-white text-[15px] font-semibold px-6 py-2.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="bg-background text-white text-[15px] font-semibold px-6 py-2.5 rounded-lg hover:bg-hover transition-colors"
             >
               Join Us
             </Link>
@@ -52,7 +52,7 @@ const Navbar = ({ mobileOnly = false }) => {
       )}
 
       {/* Mobile Nav — hidden on desktop */}
-      <nav className="bg-white px-6 py-4 flex items-center justify-between md:hidden relative z-[60] font-[Poppins]">
+      <nav className="bg-white px-6 py-4 flex items-center justify-between md:hidden relative z-[60]">
         <div className="flex items-center gap-2">
           <Link to="/">
             <img src={logo} alt="ScaleUp" className="h-8 w-auto" />
@@ -77,7 +77,7 @@ const Navbar = ({ mobileOnly = false }) => {
       )}
       {/* Drawer panel */}
       <div
-        className={`fixed top-0 right-0 z-[70] h-fit w-64 bg-white shadow-2xl rounded-bl-2xl flex flex-col gap-1 px-6 py-6 md:hidden font-[Poppins] transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 z-[70] h-fit w-64 bg-white shadow-2xl rounded-bl-2xl flex flex-col gap-1 px-6 py-6 md:hidden transition-transform duration-300 ease-out ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -42,7 +42,7 @@ const values = [
    ────────────────────────────────────────────── */
 const AboutUs = () => {
   return (
-    <div className="min-h-screen flex flex-col font-[Poppins]">
+    <div className="min-h-screen flex flex-col">
       {/* ─── Navbar ─── */}
       <Navbar />
 
@@ -57,7 +57,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-black/50" />
         {/* Centered text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <h1 className="text-primary font-inter text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
             About Us
           </h1>
         </div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
           <div className="order-2 md:hidden w-full px-3">
             <Link
               to="/join-us"
-              className="block w-full text-center bg-[#193A84] text-white font-semibold text-base py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="block w-full font-inter text-center bg-[#193A84] text-white font-semibold text-base py-3.5 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
             </Link>
@@ -90,7 +90,7 @@ const AboutUs = () => {
 
           {/* Text — order 3 on mobile, right on desktop */}
           <div className="order-3 md:order-none flex-1 px-6 md:px-0">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-5">
+            <h2 className="text-2xl font-inter md:text-3xl font-bold text-[#1a1a2e] mb-5">
               About <span className="text-[#193A84]">ScaleUp</span>
             </h2>
             <p className="text-[#193A84] md:text-xl md:text-base leading-relaxed mb-8">
@@ -102,7 +102,7 @@ const AboutUs = () => {
             {/* Desktop-only Join Us button */}
             <Link
               to="/join-us"
-              className="hidden md:inline-block bg-[#193A84] text-white font-semibold text-base px-12 py-3 rounded-lg hover:bg-[#142e6b] transition-colors"
+              className="hidden md:inline-block bg-[#193A84] text-white font-inter font-semibold text-base px-12 py-3 rounded-lg hover:bg-[#142e6b] transition-colors"
             >
               Join Us
             </Link>
@@ -125,7 +125,7 @@ const AboutUs = () => {
                 <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center flex-shrink-0">
                   <Users size={22} className="text-white" />
                 </span>
-                <h3 className="text-xl md:text-2xl font-bold text-[#1a1a2e]">
+                <h3 className="text-xl font-inter md:text-2xl font-bold text-[#1a1a2e]">
                   Our <span className="text-[#193A84]">Mission</span>
                 </h3>
               </div>
@@ -142,7 +142,7 @@ const AboutUs = () => {
                 <span className="w-11 h-11 rounded-full bg-[#193A84] flex items-center justify-center flex-shrink-0">
                   <Eye size={22} className="text-white" />
                 </span>
-                <h3 className="text-xl md:text-2xl font-bold text-[#1a1a2e]">
+                <h3 className="text-xl font-inter md:text-2xl font-bold text-[#1a1a2e]">
                   Our <span className="text-[#193A84]">Vision</span>
                 </h3>
               </div>
@@ -171,7 +171,7 @@ const AboutUs = () => {
       <section className="bg-[#193A84] px-6 lg:px-16 my-15 py-8 md:py-24 mb-15 md:mb-15 md:mx-8 lg:mx-15 md:rounded-[20px]">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
+          <h2 className="text-2xl font-inter md:text-3xl font-bold text-white text-center mb-4">
             Our Values
           </h2>
           <p className="text-white/70 text-sm md:text-base text-center max-w-2xl mx-auto mb-14 leading-relaxed">
@@ -194,7 +194,7 @@ const AboutUs = () => {
                   <span className="w-12 h-12 rounded-full bg-[#193A84]/10 flex items-center justify-center mb-5">
                     <Icon size={24} className="text-[#193A84]" />
                   </span>
-                  <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{value.title}</h4>
+                  <h4 className="font-semibold text-[#1a1a2e] text-base mb-2">{value.title}</h4>
                   <p className="text-[#193A84] text-sm leading-relaxed">{value.desc}</p>
                 </div>
               );
@@ -207,18 +207,18 @@ const AboutUs = () => {
             {(() => {
               const Icon = values[0].icon;
               return (
-                <div className="flex-1 bg-white my-[20px] mx-[25px] rounded-2xl p-7 shadow-md hover:-translate-y-1 transition-transform duration-300 flex flex-col">
-                  <span className="w-12 h-12 rounded-full bg-[#193A84] flex items-center justify-center mb-5">
-                    <Icon size={24} className="text-[#FFFFFF]" />
+                <div className="flex-[0.6] bg-white my-[20px] mx-[25px] rounded-2xl py-7 px-10 shadow-md hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+                  <span className="w-12 h-12 rounded-full bg-[#193A84] mb-8 flex items-center justify-center mb-5">
+                    <Icon size={36} className="text-[#FFFFFF]" />
                   </span>
-                  <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{values[0].title}</h4>
-                  <p className="text-[#193A84] text-xl leading-relaxed">{values[0].desc}</p>
+                  <h4 className="font-bold text-[#1a1a2e] text-xl mb-6">{values[0].title}</h4>
+                  <p className="text-[#193A84] text-lg leading-relaxed">{values[0].desc}</p>
                 </div>
               );
             })()}
 
             {/* Right column — 4 remaining cards in 2×2 grid */}
-            <div className="flex-1 grid grid-cols-2 gap-6">
+            <div className="flex-[1.4] grid grid-cols-2 gap-6">
               {values.slice(1).map((value) => {
                 const Icon = value.icon;
                 return (
@@ -230,7 +230,7 @@ const AboutUs = () => {
                       <Icon size={24} className="text-[#FFFFFF]" />
                     </span>
                     <h4 className="font-bold text-[#1a1a2e] text-base mb-2">{value.title}</h4>
-                    <p className="text-[#193A84] text-sm leading-relaxed">{value.desc}</p>
+                    <p className="text-[#193A84] leading-relaxed">{value.desc}</p>
                   </div>
                 );
               })}
@@ -241,7 +241,7 @@ const AboutUs = () => {
           <div className="mt-10 md:mt-14 px-3 md:px-0 md:flex md:justify-center">
             <Link
               to="/join-us"
-              className="block md:inline-block w-full md:w-auto text-center bg-white text-[#193A84] font-semibold text-base px-15 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="block md:inline-block w-full md:w-auto text-center bg-white text-[#193A84] font-semibold font-inter text-base px-15 py-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Join Us
             </Link>
