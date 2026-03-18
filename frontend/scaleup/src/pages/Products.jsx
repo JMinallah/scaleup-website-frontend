@@ -74,7 +74,7 @@ const Products = () => {
         <div className="absolute inset-0 bg-black/50" />
         {/* Centered text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <h1 className="text-white font-inter text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
             Products
           </h1>
         </div>

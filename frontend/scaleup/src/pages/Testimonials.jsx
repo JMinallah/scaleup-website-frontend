@@ -46,7 +46,7 @@ const StarRating = () => (
 const TestimonialCard = ({ testimonial }) => {
   return (
     <div
-      className={`bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1`}
+      className={`bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1`}
     >
       <div>
         <StarRating />
@@ -79,7 +79,7 @@ const Testimonials = () => {
       <Navbar />
 
       {/* Hero heading area */}
-      <section className="bg-[#193A84] h-[256px] md:h-[270px] flex flex-col items-center justify-center px-6 text-center">
+      <section className="bg-[#193A84] h-[256px] md:h-[270px] font-inter flex flex-col items-center justify-center px-6 text-center">
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-2">
           What Our Users Say
         </h2>
@@ -105,7 +105,7 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials cards */}
-      <section className="bg-[#FFFFFF] flex-1 pt-0 pb-12 relative">
+      <section className="bg-[#FFFFFF] font-inter flex-1 pt-0 pb-12 relative">
         <div className="max-w-6xl mx-auto px-6 -mt-16 relative z-10">
           {/* First card — centered, overlaps hero */}
           <div className="flex justify-center mb-7">
