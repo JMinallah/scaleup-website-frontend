@@ -10,17 +10,19 @@
    --color-primary: #FFFFFF;
    --color-secondary: #000000;
    --color-neutral: #0F172A; 
+   --collor-neutral-primary: #1F2937;
    --color-neutral-text: #475569; 
    --color-neutral-muted: #64748B;
    --color-border: #193A8433;
    --color-input-bg: #E5E7EBAB;
    --color-main: #193A84; 
-   --color-background: #1E4E8C; 
-   --color-btn-text: #E8EFF7;
+   --color-background: #1E4E8C;  
+   --color-hover: #142e6b;
+   --color-btn-text: #E8EFF7; 
 }
 
 :root {
-  font-family: var(--font-inter);
+  font-family: var(--font-poppins);
   line-height: 1.5;
   font-weight: 400;
 
@@ -38,4 +40,20 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: var(--font-poppins);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 20s linear infinite;
+}
+
+.pause {
+  animation-play-state: paused;
 }

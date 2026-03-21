@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import heroImg from "../assets/images/comtact.jpg";
 import phone1 from "../assets/iPhone 16 Pro.png";
 import phone2 from "../assets/iPhone 16 Pro(1).png";
+import helloIcon from "../assets/icons/icon_logo.svg"
 
 /* ──────────────────────────────────────────────
    Products Page Component
@@ -74,7 +75,7 @@ const Products = () => {
         <div className="absolute inset-0 bg-black/50" />
         {/* Centered text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <h1 className="text-white font-inter text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
             Products
           </h1>
         </div>
@@ -92,9 +93,12 @@ const Products = () => {
               Coming Soon!!!
             </button>
 
-            <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#1a1a2e] leading-tight mb-5">
-              HelloAgain
-            </h2>
+            <div className="flex gap-2 items-center mb-5">
+              <img src={helloIcon} alt="HelloAgain Logo" className="w-10 h-10 lg:w-14 lg:h-14"/>
+              <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#1a1a2e] leading-tight">
+                HelloAgain
+              </h2>
+            </div>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-2 max-w-lg">
               Hello Again is a smart communication product built to help brands
               reconnect with their customers at the right time.

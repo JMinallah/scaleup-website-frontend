@@ -78,7 +78,7 @@ const ContactPage = () => {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-bold text-primary text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="font-bold font-inter text-primary text-4xl md:text-5xl lg:text-6xl">
             Contact Us
           </h1>
         </div>
@@ -104,10 +104,10 @@ const ContactPage = () => {
             {/* Left Column - Contact Info */}
             <div className="px-4 pt-4 md:p-8">
               <div className="mb-10">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral mb-6">
+                <h2 className="text-3xl font-inter md:text-4xl lg:text-5xl font-semibold text-neutral mb-6">
                   Contact Us
                 </h2>
-                <p className="font-poppins font-regular text-neutral-text text-base md:text-lg lg:text-2xl ">
+                <p className="font-regular text-neutral-text text-base md:text-lg lg:text-2xl ">
                   Have a question, concern, or require assistance?
                   <br />
                   Our team is available to support you. Please send us a message
@@ -124,7 +124,7 @@ const ContactPage = () => {
                     className="w-6 h-6 md:w-9 md:h-9"
                   />
                   <div>
-                    <h3 className="font-medium text-secondary text-base md:text-xl lg:text-2xl">
+                    <h3 className="font-medium font-inter text-secondary text-base md:text-xl lg:text-2xl">
                       Email
                     </h3>
                     <p className="text-neutral-text font-regular text-sm md:text-base lg:text-xl">
@@ -141,7 +141,7 @@ const ContactPage = () => {
                     className="w-6 h-6 md:w-9 md:h-9"
                   />
                   <div>
-                    <h3 className="font-medium text-secondary text-base md:text-xl lg:text-2xl">
+                    <h3 className="font-medium font-inter text-secondary text-base md:text-xl lg:text-2xl">
                       Phone Number
                     </h3>
                     <p className="text-neutral-text font-regular text-sm md:text-base lg:text-xl">
@@ -158,7 +158,7 @@ const ContactPage = () => {
                     className="w-6 h-6 md:w-9 md:h-9"
                   />
                   <div>
-                    <h3 className="font-medium text-secondary text-base md:text-xl lg:text-2xl">
+                    <h3 className="font-medium font-inter text-secondary text-base md:text-xl lg:text-2xl">
                       Work Model
                     </h3>
                     <p className="text-neutral-text font-regular text-sm md:text-base lg:text-xl">
