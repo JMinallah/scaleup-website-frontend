@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import heroImg from "../assets/images/comtact.jpg";
 import phone1 from "../assets/iPhone 16 Pro.png";
-import phone2 from "../assets/iPhone 16 Pro(1).png";
+import phone3 from "../assets/images/phone3.jpg"
 import helloIcon from "../assets/icons/icon_logo.svg"
 
 /* ──────────────────────────────────────────────
@@ -137,7 +137,7 @@ const Products = () => {
               <div className="absolute bottom-0 left-0 w-full h-[64%] bg-[#1E4E8C] rounded-[30px] md:rounded-[50px]" />
               {/* Back phone (right) */}
               <img
-                src={phone2}
+                src={phone3}
                 alt="HelloAgain chat interface"
                 className="absolute bottom-0 left-[44%] w-[49%] h-auto drop-shadow-2xl z-[1]"
               />
