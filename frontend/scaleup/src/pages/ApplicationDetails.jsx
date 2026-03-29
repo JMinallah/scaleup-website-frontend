@@ -222,7 +222,9 @@ const skillOptions = [
   "Software engineering",
   "Content creation",
   "Quality Assurance",
-  "Event outreach/ Lead generations",
+  "Event outreach",
+  "Lead Generation",
+  "Cloud Engineer",
 ];
 
 const ApplicationDetails = () => {
