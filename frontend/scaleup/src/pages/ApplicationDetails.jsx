@@ -194,7 +194,16 @@ const parseApiValidationErrors = (body) => {
 };
 
 const getSubmitErrorMessage = (err) => {
-  if (err.status === 400 || err.status === 422) {
+  if (err && (err.status === 400 || err.status === 422)) {
+    // Prefer server-provided message when available (e.g. duplicate email)
+    if (err.body && typeof err.body === "object") {
+      if (typeof err.body.message === "string" && err.body.message.trim()) {
+        return err.body.message;
+      }
+      if (typeof err.body.error === "string" && err.body.error.trim()) {
+        return err.body.error;
+      }
+    }
     return "Please fix the highlighted fields and submit again.";
   }
   if (err.status === 409) {
@@ -213,7 +222,9 @@ const skillOptions = [
   "Software engineering",
   "Content creation",
   "Quality Assurance",
-  "Event outreach/ Lead generations",
+  "Event outreach",
+  "Lead Generation",
+  "Cloud Engineer",
 ];
 
 const ApplicationDetails = () => {

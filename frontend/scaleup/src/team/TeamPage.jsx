@@ -9,7 +9,6 @@ import haulat from "../assets/images/haulat.jpg";
 import james from "../assets/images/james.jpg";
 import tiolu from "../assets/images/tiolu.jpg";
 import ese from "../assets/images/ese.jpeg";
-import david from "../assets/images/david.jpeg";
 import TeamCard from "./TeamCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -84,13 +83,6 @@ const teamMembers = [
     description:
       "Ese crafts engaging content that informs, entertains, and connects with audiences, bringing ideas to life across multiple platforms.",
     image: ese,
-  },
-  {
-    name: "David  Láleye",
-    role: " Lead, Accounting",
-    description:
-      "David ensures financial accuracy and transparency by managing records, analyzing data, and supporting strategic decisions with clear insights.",
-    image: david,
   },
 ];
 
