@@ -100,7 +100,7 @@ const Home = () => {
       {/* ═══════════════════════════════════════
           HERO SECTION
          ═══════════════════════════════════════ */}
-      <section className="home-hero bg-white px-16 lg:px-16 pt-6 md:pt-12 pb-0">
+      <section className="home-hero bg-white px-6 lg:px-16 pt-6 md:pt-12 pb-0">
         <div className="home-hero__inner w-full flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Text */}
           <div className="home-hero__text flex-1 text-left">
