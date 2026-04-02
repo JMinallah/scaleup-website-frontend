@@ -29,7 +29,7 @@ const testimonials = [
     quote:
       "This platform has made product management easier. From ideation to launch, every stage is streamlined with the right tools and clear visibility.",
     name: "Haulat Alobalowa",
-    role: "Product Management",
+    role: "Product Manager",
     image: haulatImg,
     featured: false,
   },

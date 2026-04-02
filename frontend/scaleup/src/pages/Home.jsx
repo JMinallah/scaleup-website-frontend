@@ -100,10 +100,10 @@ const Home = () => {
       {/* ═══════════════════════════════════════
           HERO SECTION
          ═══════════════════════════════════════ */}
-      <section className="bg-white px-6 lg:px-10 pt-6 md:pt-12 pb-0">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <section className="home-hero bg-white px-6 lg:px-16 pt-6 md:pt-12 pb-0">
+        <div className="home-hero__inner w-full flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Text */}
-          <div className="flex-1 text-left">
+          <div className="home-hero__text flex-1 text-left">
             <h1 className="text-3xl font-inter md:text-[48px] lg:text-5xl font-bold text-[#1E4E8C] leading-tight mb-6">
               Building Products, People, and Possibilities Together
             </h1>
@@ -121,7 +121,7 @@ const Home = () => {
           </div>
 
           {/* Hero Image — with dashed dots & blue circle behind */}
-          <div className="flex-shrink-0 flex items-center justify-center">
+          <div className="home-hero__art flex-shrink-0 flex items-center justify-center">
             <div className="relative w-[254px] h-[234px] md:w-[420px] md:h-[387px]">
               {/* Dashed circle outline */}
               <div className="absolute top-[25px] left-[65px] w-[200px] h-[200px] md:top-[22px] md:left-[116px] md:w-[320px] md:h-[320px] rounded-full border-[3px] border-dashed border-black" />
