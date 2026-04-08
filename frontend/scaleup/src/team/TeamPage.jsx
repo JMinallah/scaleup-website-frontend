@@ -1,6 +1,5 @@
 import teamBg from "../assets/images/team-bg.jpg";
 import franklin from "../assets/images/franklin.jpg";
-import adebayo from "../assets/images/adebayo.jpg";
 import angel from "../assets/images/angel.jpg";
 import benedicta from "../assets/images/benedicta.jpg";
 import daniel from "../assets/images/daniel.jpg";
@@ -30,17 +29,10 @@ const teamMembers = [
   },
   {
     name: "Daniel Edet",
-    role: "Lead, Saas Operations/Project management",
+    role: "Lead, Saas Operations/Project Manager",
     description:
       "Daniel drives operational excellence by ensuring seamless project execution, optimized workflows, and scalable delivery of our SaaS platform.",
     image: daniel,
-  },
-  {
-    name: " Adebayo Destiny Solomon",
-    role: " Lead, Software Engineering",
-    description:
-      "Ade leads the technical vision and architecture, building secure, scalable, and high performance systems that power ScaleUp’s growth.",
-    image: adebayo,
   },
   {
     name: "Olukayode Tioluwanimi Blessing",
@@ -58,7 +50,7 @@ const teamMembers = [
   },
   {
     name: " Haulat Alobalowa",
-    role: " Lead, Product management ",
+    role: " Lead, Product Manager ",
     description:
       "Haulat shapes and delivers impactful products by aligning user needs, business goals, and strategic vision into a clear, actionable roadmap.",
     image: haulat,
